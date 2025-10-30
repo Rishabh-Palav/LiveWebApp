@@ -16,7 +16,10 @@ namespace TestAppLive
                 options.AddPolicy("AllowReactApp",
                     policy =>
                     {
-                        policy.WithOrigins("http://localhost:3000") // React app URL
+                        policy.WithOrigins(
+                            "http://localhost:3000",
+                            "https://aesthetic-trifle-32f474.netlify.app"
+                        ) // React app URL
                               .AllowAnyHeader()
                               .AllowAnyMethod()
                               .AllowCredentials(); // Optional
